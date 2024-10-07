@@ -11,20 +11,32 @@ export function ProjectList({ projects }: { projects: Project[] }) {
           className="h-full rounded-md border-2 border-black bg-[#A6FAFF] text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,1)] dark:hover:shadow-[2px_2px_0px_rgba(255,255,255,1)]"
         >
           <Link href={project.link}>
-            <article className="grid-cols-auto-auto grid h-full w-full items-center divide-x-2 divide-black dark:divide-white">
-              {project.imagePos === "left" ? (
-                <ProjectImage project={project} className="rounded-l-[4px]" />
-              ) : null}
-              <div className="h-full px-6 py-5 text-left">
-                <h1 className="mb-4 text-3xl">{project.title}</h1>
+            <article
+              className={`flex h-full w-full flex-col items-center divide-y-2 divide-black sm:grid sm:grid-cols-[auto_1fr] sm:divide-x-2 sm:divide-y-0 dark:divide-white ${
+                project.imagePos === "right" ? "sm:grid-cols-[1fr_auto]" : ""
+              }`}
+            >
+              {(project.imagePos === "left" || !project.imagePos) && (
+                <ProjectImage
+                  project={project}
+                  className="w-full rounded-t-[4px] sm:w-auto sm:rounded-l-[4px] sm:rounded-tr-none"
+                />
+              )}
+              <div className="h-full max-w-full break-words px-6 py-5 text-left">
+                <h1 className="mb-4 text-3xl font-bold">{project.title}</h1>
                 <p className="mb-4 line-clamp-4 text-xs">
                   {project.description}
                 </p>
-                <strong>Read More</strong>
+                <strong className="inline-block border-2 border-black px-2 py-1 transition-all hover:bg-black hover:text-white">
+                  Read More
+                </strong>
               </div>
-              {project.imagePos === "right" ? (
-                <ProjectImage project={project} className="rounded-r-[4px]" />
-              ) : null}
+              {project.imagePos === "right" && (
+                <ProjectImage
+                  project={project}
+                  className="w-full rounded-b-[4px] sm:w-auto sm:rounded-r-[4px] sm:rounded-bl-none"
+                />
+              )}
             </article>
           </Link>
         </div>
@@ -51,7 +63,7 @@ function ProjectImage({
         alt={project.title}
         width={196}
         height={196}
-        className="max-h-48 max-w-48"
+        className="max-h-48 max-w-48 object-cover"
       />
     </figure>
   );
@@ -62,6 +74,6 @@ export type Project = {
   description: string;
   image: string;
   link: string;
-  imagePos: "left" | "right";
+  imagePos?: "left" | "right";
   bgColour?: string;
 };

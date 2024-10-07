@@ -11,6 +11,9 @@ export default {
       gridTemplateColumns: {
         "auto-auto": "auto auto",
       },
+      screens: {
+        xs: "420px",
+      },
     },
   },
   plugins: [],

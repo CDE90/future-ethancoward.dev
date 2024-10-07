@@ -82,7 +82,7 @@ export function RepoList({ repos }: { repos: Repo[] }) {
           </span>
           <button
             type="button"
-            className="inline-flex w-72 justify-between border-2 border-black bg-[#B8FF9F] px-4 py-3 text-lg font-bold capitalize text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:outline-none dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,1)] dark:hover:shadow-[2px_2px_0px_rgba(255,255,255,1)]"
+            className="inline-flex w-48 justify-between border-2 border-black bg-[#B8FF9F] px-4 py-3 text-lg font-bold capitalize text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:outline-none md:w-72 dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,1)] dark:hover:shadow-[2px_2px_0px_rgba(255,255,255,1)]"
             onClick={() => setSelectOpen(!selectOpen)}
           >
             {sort}
@@ -91,7 +91,7 @@ export function RepoList({ repos }: { repos: Repo[] }) {
         </div>
 
         {selectOpen && (
-          <div className="absolute right-0 z-10 mt-2 w-72 origin-top-right border-2 border-black bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-[#1A1A1A] dark:shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+          <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right border-2 border-black bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)] md:w-72 dark:border-white dark:bg-[#1A1A1A] dark:shadow-[4px_4px_0px_rgba(255,255,255,1)]">
             {["stars", "name", "created", "updated"].map((option) => (
               <button
                 key={option}
@@ -158,7 +158,7 @@ export function ProjectListGlimmer() {
     <div className="mx-auto mb-4 mt-8 flex max-w-7xl flex-col items-center px-4">
       <div className="ml-auto flex items-center">
         <div className="mr-2 h-8 w-32 animate-pulse bg-black dark:bg-white" />
-        <div className="h-14 w-72 animate-pulse border-2 border-black bg-gray-200 dark:border-white dark:bg-gray-700" />
+        <div className="h-14 w-48 animate-pulse border-2 border-black bg-gray-200 md:w-72 dark:border-white dark:bg-gray-700" />
       </div>
 
       <div className="mt-8 grid w-full gap-8 md:grid-cols-2 xl:grid-cols-3">

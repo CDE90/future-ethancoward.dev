@@ -12,7 +12,7 @@ export function NavBar() {
       <div className="flex h-12 items-center justify-between divide-x-2 divide-black dark:divide-white">
         <div className="flex h-full w-full items-center text-left text-2xl font-bold">
           <ButtonContainer className="flex h-full w-full md:hidden">
-            <Link href="/" className="h-full w-full px-4 py-2">
+            <Link href="/" className="h-full w-full overflow-hidden px-4 py-2">
               Ethan Coward
             </Link>
           </ButtonContainer>

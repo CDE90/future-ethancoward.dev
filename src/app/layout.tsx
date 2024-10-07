@@ -4,8 +4,9 @@ import { IBM_Plex_Mono } from "next/font/google";
 import { type Metadata } from "next";
 import { NavBar } from "~/components/NavBar";
 import { BehindApp } from "~/components/BehindApp";
-import { CSPostHogProvider } from "~/app/providers";
 import SpotifyWidget from "~/components/SpotifyWidget";
+import Providers from "~/app/providers";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const fontStyle = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function RootLayout({
       lang="en"
       className={`${fontStyle.className} min-h-screen bg-fuchsia-400 p-4 md:p-6`}
     >
-      <CSPostHogProvider>
+      <Providers>
         <body>
           <div
             className="min-h-full border-2 border-black bg-white text-black shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-black dark:text-white"
@@ -48,8 +49,9 @@ export default function RootLayout({
           </div>
           <SpotifyWidget />
           <BehindApp />
+          <ReactQueryDevtools initialIsOpen={false} />
         </body>
-      </CSPostHogProvider>
+      </Providers>
     </html>
   );
 }

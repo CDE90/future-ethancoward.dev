@@ -3,30 +3,25 @@
 import { FaSpotify } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { NowPlaying } from "~/lib/spotify";
+import { useQuery } from "@tanstack/react-query";
+
+async function getNowPlaying() {
+  const res = await fetch("/api/now-playing", { method: "POST" });
+  return (await res.json()) as NowPlaying;
+}
 
 export function SpotifyWidget() {
-  const [nowPlaying, setNowPlaying] = useState<NowPlaying>({
-    isPlaying: false,
-  });
   const [show, setShow] = useState(true);
 
-  useEffect(() => {
-    const fetchNowPlaying = () => {
-      fetch("/api/now-playing", { method: "POST" })
-        .then((res) => res.json())
-        .then((data) => setNowPlaying(data as NowPlaying))
-        .catch((err) => console.error(err));
-    };
+  const { data: nowPlaying, isLoading } = useQuery({
+    queryKey: ["now-playing"],
+    queryFn: getNowPlaying,
+    refetchInterval: 30000,
+  });
 
-    fetchNowPlaying();
-    const interval = setInterval(fetchNowPlaying, 30000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!nowPlaying.isPlaying)
+  if (isLoading || !nowPlaying)
     return (
       <div className="fixed bottom-0 right-0 z-50 pb-6 pr-6 md:pb-8 md:pr-8">
         <div className="isolate border-2 border-black bg-[#B8FF9F] text-black shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-[#9dfc7c]">

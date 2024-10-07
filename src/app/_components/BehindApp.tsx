@@ -3,7 +3,7 @@
 export function BehindApp() {
   return (
     <div
-      className="hidden border-2 border-black bg-[#A6FAFF] text-black hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] sm:text-xl"
+      className="hidden border-2 border-black bg-[#A6FAFF] text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] sm:text-xl"
       id="behind-app"
     >
       <button

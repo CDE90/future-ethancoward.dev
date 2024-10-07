@@ -8,7 +8,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="h-full rounded-md border-2 border-black bg-[#A6FAFF] text-black hover:bg-[#79F7FF] hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] dark:border-white dark:hover:shadow-[8px_8px_0px_rgba(255,255,255,1)]"
+          className="h-full rounded-md border-2 border-black bg-[#A6FAFF] text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,1)] dark:hover:shadow-[2px_2px_0px_rgba(255,255,255,1)]"
         >
           <Link href={project.link}>
             <article className="grid-cols-auto-auto grid h-full w-full items-center divide-x-2 divide-black dark:divide-white">

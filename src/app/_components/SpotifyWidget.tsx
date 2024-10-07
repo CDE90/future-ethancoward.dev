@@ -21,13 +21,14 @@ export function SpotifyWidget() {
     refetchInterval: 30000,
   });
 
-  if (isLoading || !nowPlaying)
+  if (isLoading || !nowPlaying?.isPlaying)
     return (
       <div className="fixed bottom-0 right-0 z-50 pb-6 pr-6 md:pb-8 md:pr-8">
         <div className="isolate border-2 border-black bg-[#B8FF9F] text-black shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-[#9dfc7c]">
           <Link
             className="flex h-full w-full flex-col p-2 sm:p-3 md:p-4"
             href="https://open.spotify.com/user/cdeyolo/"
+            target="_blank"
           >
             <FaSpotify className="h-8 w-8" />
           </Link>

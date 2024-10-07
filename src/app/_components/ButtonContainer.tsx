@@ -7,7 +7,7 @@ export function ButtonContainer({
   className?: string;
   colour?: "default" | "red" | "pink" | "blue";
 }>) {
-  let colourClass = "";
+  let colourClass = "transition-all duration-300 ease-in-out ";
 
   if (!colour || colour === "default") {
     colourClass +=

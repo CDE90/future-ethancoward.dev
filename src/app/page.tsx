@@ -3,9 +3,9 @@ import { ProjectList, type Project } from "~/app/_components/ProjectList";
 export default function HomePage() {
   return (
     <main>
-      <div className="mx-auto flex h-full max-w-4xl flex-col items-center px-4">
+      <div className="mx-auto flex h-full max-w-7xl flex-col items-center px-4">
         <div className="px-4 pt-8 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-7xl">
             <h1 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
               Hello, I&apos;m <em>Ethan</em>
             </h1>
@@ -31,18 +31,15 @@ export default function HomePage() {
             </p>
             <p className="mb-4 text-gray-800 sm:text-lg dark:text-gray-300">
               <em>
-                Just a heads up: this site is always evolving! I&apos;m
-                constantly tinkering with it, adding new projects and polishing
-                things up. So if you spot anything wonky, it&apos;s probably
-                just me in the middle of an update. Feel free to check back
-                often to see what&apos;s new!
+                This version of the site is still in development. Hopefully it
+                will be ready for you to explore fully soon!
               </em>
             </p>
           </div>
         </div>
 
         <div className="mb-6 w-full px-4 pt-8 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-5xl">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
               Recent Projects
             </h2>
@@ -51,7 +48,7 @@ export default function HomePage() {
         </div>
 
         <div className="mb-4 px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
               Let&apos;s Connect
             </h2>

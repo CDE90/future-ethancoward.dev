@@ -1,7 +1,9 @@
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
+import { IBM_Plex_Mono } from "next/font/google";
 import { type Metadata } from "next";
+import { NavBar } from "~/components/NavBar";
+import { BehindApp } from "~/components/BehindApp";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -9,12 +11,46 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const fontStyle = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${fontStyle.className} min-h-screen bg-fuchsia-400 p-4 md:p-6`}
+    >
+      <body>
+        <div
+          className="min-h-full border-2 border-black bg-white text-black shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-black dark:text-white"
+          id="app"
+        >
+          <NavBar />
+          <div className="p-2">{children}</div>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            (function() {
+              function getInitialTheme() {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                  return storedTheme;
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+              }
+              const theme = getInitialTheme();
+              document.documentElement.classList.add(theme);
+            })();
+          `,
+            }}
+          />
+        </div>
+        <BehindApp />
+      </body>
     </html>
   );
 }

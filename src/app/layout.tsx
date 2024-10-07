@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { IBM_Plex_Mono } from "next/font/google";
 import { type Metadata } from "next";
 import { NavBar } from "~/components/NavBar";
+import { Footer } from "~/components/Footer";
 import { BehindApp } from "~/components/BehindApp";
 import SpotifyWidget from "~/components/SpotifyWidget";
 import Providers from "~/app/providers";
@@ -29,6 +30,7 @@ export default function RootLayout({
           >
             <NavBar />
             <div className="p-2">{children}</div>
+            <Footer />
             <script
               dangerouslySetInnerHTML={{
                 __html: `

@@ -8,10 +8,10 @@ export function ProjectList({ projects }: { projects: Project[] }) {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="h-full rounded-md border-2 border-black bg-[#A6FAFF] text-black hover:bg-[#79F7FF] hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF]"
+          className="h-full rounded-md border-2 border-black bg-[#A6FAFF] text-black hover:bg-[#79F7FF] hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] dark:border-white dark:hover:shadow-[8px_8px_0px_rgba(255,255,255,1)]"
         >
           <Link href={project.link}>
-            <article className="grid-cols-auto-auto grid h-full w-full items-center divide-x-2 divide-black">
+            <article className="grid-cols-auto-auto grid h-full w-full items-center divide-x-2 divide-black dark:divide-white">
               {project.imagePos === "left" ? (
                 <ProjectImage project={project} className="rounded-l-[4px]" />
               ) : null}
@@ -42,7 +42,7 @@ function ProjectImage({
 }) {
   return (
     <figure
-      className={`flex h-full p-2 ${className}`}
+      className={`flex h-full items-center justify-center p-2 ${className}`}
       style={{ backgroundColor: project.bgColour }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}

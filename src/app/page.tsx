@@ -3,7 +3,7 @@ import { ProjectList, type Project } from "~/app/_components/ProjectList";
 export default function HomePage() {
   return (
     <main>
-      <div className="mx-auto flex h-full max-w-2xl flex-col items-center px-4">
+      <div className="mx-auto flex h-full max-w-4xl flex-col items-center px-4">
         <div className="px-4 pt-8 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h1 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
@@ -41,7 +41,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mb-4 w-full px-4 pt-8 sm:px-6 lg:px-8">
+        <div className="mb-6 w-full px-4 pt-8 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
               Recent Projects
@@ -59,9 +59,9 @@ export default function HomePage() {
               If you have a project idea, want to discuss technology trends, or
               are interested in collaboration, please don&apos;t hesitate to
               reach out. You can contact me at{" "}
-              <strong className="group text-blue-600 transition-all duration-300 ease-in-out dark:text-blue-400">
+              <strong className="group text-[#e879f9] transition-all duration-300 ease-in-out dark:text-[#e879f9]">
                 <a
-                  className="bg-gradient-to-r from-blue-600 to-blue-600 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-300 ease-out group-hover:bg-[length:100%_2px] dark:from-blue-400 dark:to-blue-400"
+                  className="bg-gradient-to-r from-[#e879f9] to-[#e879f9] bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all ease-out group-hover:bg-[length:100%_2px] dark:from-[#e879f9] dark:to-[#e879f9]"
                   href="mailto:hello@ethancoward.dev"
                 >
                   hello@ethancoward.dev
@@ -82,7 +82,7 @@ const projects: Project[] = [
     title: "VC Roles Discord Bot",
     description:
       "A Discord bot that adds much needed features to Discord Voice Channels.",
-    image: "https://www.vcroles.com/android-chrome-512x512.png",
+    image: "/images/vcroles-logo.png",
     link: "/p/vcroles-bot",
     imagePos: "left",
     bgColour: "#3d46cd",
@@ -91,7 +91,7 @@ const projects: Project[] = [
     title: "VC Roles Website & Dashboard",
     description:
       "The website for the VC Roles Discord Bot with a dashboard for server management, documentation and more.",
-    image: "https://www.vcroles.com/android-chrome-512x512.png",
+    image: "/images/vcroles-logo.png",
     link: "/p/vcroles-website",
     imagePos: "right",
     bgColour: "#3d46cd",

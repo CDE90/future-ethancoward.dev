@@ -79,3 +79,7 @@ export default function HomePage() {
     </main>
   );
 }
+
+export const metadata = {
+  title: "Ethan Coward | Home",
+};

@@ -32,8 +32,8 @@ export function NavBar() {
             <span className="hidden h-full w-full px-4 py-2 md:block">
               Projects
             </span>
-            <div className="p-2">
-              <CgCode className="h-8 w-8 md:hidden" />
+            <div className="p-2 md:hidden">
+              <CgCode className="h-8 w-8" />
             </div>
           </Link>
         </ButtonContainer>

@@ -14,4 +14,3 @@ export default function ProjectPage() {
     </div>
   );
 }
-export const runtime = "edge";

@@ -131,7 +131,7 @@ export default function HomePage() {
             <p className="mb-4 text-gray-800 sm:text-lg dark:text-gray-300">
               Got ideas? Let&apos;s talk.
               <br />
-              <strong className="text-[#e879f9] underline decoration-transparent transition-all hover:decoration-[#e879f9] dark:text-[#e879f9]">
+              <strong className="text-purple-700 underline decoration-transparent transition-all hover:text-purple-800 hover:decoration-purple-700 dark:text-purple-400 dark:hover:text-purple-300">
                 <a href="mailto:hello@ethancoward.dev">hello@ethancoward.dev</a>
               </strong>
             </p>

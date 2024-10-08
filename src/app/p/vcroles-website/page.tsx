@@ -146,8 +146,6 @@ export default function ProjectPage() {
   );
 }
 
-export const runtime = "edge";
-
 export const metadata = {
   title: "Ethan Coward | VC Roles Website",
   description:

@@ -53,7 +53,11 @@ export function ThemeSwitcher({
   }
 
   return (
-    <button onClick={toggleTheme} className={className}>
+    <button
+      onClick={toggleTheme}
+      className={className}
+      aria-label="Toggle theme"
+    >
       {typeof children === "function" ? children(theme) : children}
     </button>
   );

@@ -29,6 +29,7 @@ export function SpotifyWidget() {
             className="flex h-full w-full flex-col p-2 sm:p-3 md:p-4"
             href="https://open.spotify.com/user/cdeyolo/"
             target="_blank"
+            aria-label="Spotify profile"
           >
             <FaSpotify className="h-8 w-8" />
           </Link>
@@ -57,23 +58,22 @@ export function SpotifyWidget() {
               <button
                 className="absolute right-7 top-1 p-1 hover:bg-red-400 sm:right-7 md:right-9"
                 onClick={() => setShow(false)}
+                aria-label="Hide spotify widget"
               >
                 <FiX className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8" />
               </button>
 
               <Link
-                className="text-xs font-bold underline decoration-transparent hover:decoration-black sm:text-sm"
+                className="flex flex-col"
                 href={nowPlaying.songUrl ?? ""}
                 target="_blank"
               >
-                <span>{nowPlaying.songName}</span>
-              </Link>
-              <Link
-                className="text-xs text-gray-800 underline decoration-transparent hover:decoration-gray-800 sm:text-sm"
-                href={nowPlaying.songUrl ?? ""}
-                target="_blank"
-              >
-                <span>{nowPlaying.artist}</span>
+                <div className="text-xs font-bold underline decoration-transparent hover:decoration-black sm:text-sm">
+                  <span>{nowPlaying.songName}</span>
+                </div>
+                <div className="text-xs text-gray-800 underline decoration-transparent hover:decoration-gray-800 sm:text-sm">
+                  <span>{nowPlaying.artist}</span>
+                </div>
               </Link>
             </div>
           </div>
@@ -83,6 +83,7 @@ export function SpotifyWidget() {
         <button
           className={`isolate border-2 border-black bg-[#B8FF9F] p-2 text-black shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:bg-[#9dfc7c] sm:p-3 md:p-4 ${show ? "hidden" : "block"}`}
           onClick={() => setShow(true)}
+          aria-label="Show spotify widget"
         >
           <div className="mt-auto flex h-full flex-col p-1">
             <FaSpotify className="h-8 w-8" />

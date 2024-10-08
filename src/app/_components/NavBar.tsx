@@ -22,13 +22,13 @@ export function NavBar() {
         </div>
 
         <ButtonContainer className="ml-auto hidden h-full text-center text-xl font-bold md:flex">
-          <Link href="/" className="h-full w-full px-4 py-2">
+          <Link href="/" className="h-full w-full px-4 py-2" aria-label="Home">
             Home
           </Link>
         </ButtonContainer>
 
         <ButtonContainer className="ml-auto h-full text-center text-xl font-bold md:ml-0">
-          <Link href="/projects">
+          <Link href="/projects" aria-label="Projects">
             <span className="hidden h-full w-full px-4 py-2 md:block">
               Projects
             </span>
@@ -55,6 +55,7 @@ export function NavBar() {
               document.querySelector("#app")?.classList.toggle("hidden");
               document.querySelector("#behind-app")?.classList.toggle("hidden");
             }}
+            aria-label="Toggle menu"
           >
             <FiX className="h-8 w-8" />
           </button>

@@ -7,7 +7,7 @@ export default function HomePage() {
       <div className="mx-auto flex h-full max-w-7xl flex-col px-4">
         <div className="px-4 pt-8 sm:px-6 lg:px-8">
           <div className="max-w-7xl">
-            <h1 className="mb-4 text-7xl font-bold text-gray-900 sm:text-9xl dark:text-gray-100">
+            <h1 className="mb-4 text-6xl font-bold text-gray-900 sm:text-8xl dark:text-gray-100">
               ETHAN COWARD
             </h1>
 
@@ -45,7 +45,7 @@ export default function HomePage() {
 
                 <section className="neo-brutalist-featured-project">
                   <h2 className="mb-2 text-2xl font-bold">FEATURED PROJECT</h2>
-                  <div className="bg-yellow-300 p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="bg-yellow-300 p-4 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                     <h3 className="mb-2 text-lg font-bold uppercase">
                       Coming Soon
                     </h3>

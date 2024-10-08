@@ -25,7 +25,7 @@ export default function RootLayout({
       <Providers>
         <body>
           <div
-            className="min-h-full border-2 border-black bg-white text-black shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-black dark:text-white"
+            className="min-h-full border-2 border-black bg-white text-black shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:border-white dark:bg-black dark:text-white dark:shadow-[8px_8px_0px_rgba(255,255,255,1)]"
             id="app"
           >
             <NavBar />

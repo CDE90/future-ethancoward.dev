@@ -8,7 +8,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="h-full rounded-md border-2 border-black bg-[#A6FAFF] text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,1)] dark:hover:shadow-[2px_2px_0px_rgba(255,255,255,1)]"
+          className="h-full border-2 border-black bg-[#A6FAFF] text-black shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,1)] dark:hover:shadow-[2px_2px_0px_rgba(255,255,255,1)]"
         >
           <Link href={project.link}>
             <article
@@ -19,10 +19,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
               }`}
             >
               {(project.imagePos === "left" || !project.imagePos) && (
-                <ProjectImage
-                  project={project}
-                  className="w-full rounded-t-[4px] sm:rounded-l-[4px] sm:rounded-r-none"
-                />
+                <ProjectImage project={project} className="w-full" />
               )}
               <div className="h-full max-w-full break-words px-6 py-5 text-left">
                 <h1 className="mb-4 text-xl font-bold sm:text-3xl">
@@ -34,10 +31,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
                 </strong>
               </div>
               {project.imagePos === "right" && (
-                <ProjectImage
-                  project={project}
-                  className="w-full rounded-b-[4px] sm:rounded-l-none sm:rounded-r-[4px]"
-                />
+                <ProjectImage project={project} className="w-full" />
               )}
             </article>
           </Link>

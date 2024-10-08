@@ -8,20 +8,20 @@ export default function HomePage() {
         <div className="px-4 pt-8 sm:px-6 lg:px-8">
           <div className="max-w-7xl">
             <h1 className="mb-4 text-6xl font-bold text-gray-900 sm:text-8xl dark:text-gray-100">
-              ETHAN COWARD
+              Ethan Coward
             </h1>
 
             <section className="mb-6">
-              <h2 className="mb-2 text-2xl font-bold">ABOUT</h2>
+              <h2 className="mb-2 text-2xl font-bold">About</h2>
               <p className="text-gray-800 sm:text-lg dark:text-gray-300">
-                18-year-old CS student. UK-based. Tech enthusiast. Coder.
+                18-year-old Comp Sci student. UK-based. Tech enthusiast. Coder.
               </p>
             </section>
 
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
               <div className="space-y-6">
                 <section>
-                  <h2 className="mb-2 text-2xl font-bold">EXPERIENCE</h2>
+                  <h2 className="mb-2 text-2xl font-bold">Experience</h2>
                   <ul className="space-y-2 text-sm text-gray-800 dark:text-gray-300">
                     <li>
                       <strong>Data analyst at Hive HR</strong> (Jun 2022 -
@@ -44,7 +44,7 @@ export default function HomePage() {
                 </section>
 
                 <section className="neo-brutalist-featured-project">
-                  <h2 className="mb-2 text-2xl font-bold">FEATURED PROJECT</h2>
+                  <h2 className="mb-2 text-2xl font-bold">Featured Project</h2>
                   <div className="bg-yellow-300 p-4 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                     <h3 className="mb-2 text-lg font-bold uppercase">
                       Coming Soon
@@ -61,7 +61,7 @@ export default function HomePage() {
               </div>
 
               <section>
-                <h2 className="mb-2 text-2xl font-bold">SKILLS</h2>
+                <h2 className="mb-2 text-2xl font-bold">Skills</h2>
                 <div className="flex flex-col gap-4 text-sm text-gray-800 sm:grid sm:grid-cols-2 dark:text-gray-300">
                   <div>
                     <h3 className="font-semibold">Web Development</h3>
@@ -117,7 +117,7 @@ export default function HomePage() {
         <div className="mb-6 w-full px-4 pt-8 sm:px-6 lg:px-8">
           <div className="">
             <h2 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
-              PROJECTS
+              Projects
             </h2>
             <ProjectList projects={projects} />
           </div>
@@ -126,7 +126,7 @@ export default function HomePage() {
         <div className="mb-4 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-gray-100">
-              CONTACT
+              Contact
             </h2>
             <p className="mb-4 text-gray-800 sm:text-lg dark:text-gray-300">
               Got ideas? Let&apos;s talk.

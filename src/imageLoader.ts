@@ -20,5 +20,5 @@ export default function imageLoader({ src, width, quality }: ImageLoaderProps) {
 
   const paramsString = params.join(",");
 
-  return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+  return `https://ecwrd.com/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
 }

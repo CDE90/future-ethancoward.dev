@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function ProjectPage() {
   return (
     <div className="mx-auto flex h-full max-w-7xl flex-col items-center px-4">
-      <div className="mb-4 space-y-6 px-4 pt-8 sm:px-6 lg:px-8">
-        <div className="flex items-center space-x-6">
+      <div className="mb-4 w-full max-w-full space-y-6 break-words px-4 pt-8 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-0 sm:space-x-6">
           <div className="relative h-32 w-32 flex-shrink-0">
             <Image
               src="/images/vcroles-logo.png"
@@ -15,7 +15,7 @@ export default function ProjectPage() {
               className="rounded-lg"
             />
           </div>
-          <h1 className="text-4xl font-bold">
+          <h1 className="max-w-full text-2xl font-bold sm:text-4xl">
             VC Roles: Revolutionizing Discord Voice Channels
           </h1>
         </div>
@@ -25,6 +25,17 @@ export default function ProjectPage() {
           channels. This project has been a journey of continuous learning and
           improvement, resulting in a powerful tool used by over 16,000 servers
           and impacting more than 15 million Discord members.
+        </p>
+        <p className="text-lg">
+          Interested in learning more about VC Roles? Check out this page about
+          the{" "}
+          <Link
+            href="/p/vcroles-website"
+            className="text-[#e879f9] hover:underline dark:text-[#e879f9]"
+          >
+            VC Roles website and dashboard
+          </Link>
+          .
         </p>
         <h2 className="text-2xl font-semibold">What is VC Roles?</h2>
         <p>
@@ -133,4 +144,5 @@ export default function ProjectPage() {
     </div>
   );
 }
+
 export const runtime = "edge";

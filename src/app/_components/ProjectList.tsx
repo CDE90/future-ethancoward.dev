@@ -12,18 +12,22 @@ export function ProjectList({ projects }: { projects: Project[] }) {
         >
           <Link href={project.link}>
             <article
-              className={`flex h-full w-full flex-col items-center divide-y-2 divide-black sm:grid sm:grid-cols-[auto_1fr] sm:divide-x-2 sm:divide-y-0 dark:divide-white ${
-                project.imagePos === "right" ? "sm:grid-cols-[1fr_auto]" : ""
+              className={`flex h-full w-full flex-col items-center divide-y-2 divide-black sm:grid sm:divide-x-2 sm:divide-y-0 dark:divide-white ${
+                project.imagePos === "right"
+                  ? "sm:grid-cols-[1fr_auto]"
+                  : "sm:grid-cols-[auto_1fr]"
               }`}
             >
               {(project.imagePos === "left" || !project.imagePos) && (
                 <ProjectImage
                   project={project}
-                  className="w-full rounded-t-[4px] sm:w-auto sm:rounded-l-[4px] sm:rounded-tr-none"
+                  className="w-full rounded-t-[4px] sm:rounded-l-[4px] sm:rounded-r-none"
                 />
               )}
               <div className="h-full max-w-full break-words px-6 py-5 text-left">
-                <h1 className="mb-4 text-3xl font-bold">{project.title}</h1>
+                <h1 className="mb-4 text-xl font-bold sm:text-3xl">
+                  {project.title}
+                </h1>
                 <p className="mb-4 line-clamp-4 text-xs">
                   {project.description}
                 </p>
@@ -34,7 +38,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
               {project.imagePos === "right" && (
                 <ProjectImage
                   project={project}
-                  className="w-full rounded-b-[4px] sm:w-auto sm:rounded-r-[4px] sm:rounded-bl-none"
+                  className="w-full rounded-b-[4px] sm:rounded-l-none sm:rounded-r-[4px]"
                 />
               )}
             </article>
@@ -63,7 +67,7 @@ function ProjectImage({
         alt={project.title}
         width={196}
         height={196}
-        className="max-h-48 max-w-48 object-cover"
+        className="max-h-48 max-w-48"
       />
     </figure>
   );

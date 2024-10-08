@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="w-full border-t-2 border-black dark:border-white">
       <div className="mx-auto max-w-screen-sm px-6 py-8">
         <div className="flex flex-col items-center gap-6">
-          <div className="flex flex-row items-center gap-8">
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-8">
             <Link
               href="https://github.com/CDE90/ethancoward.dev"
               target="_blank"

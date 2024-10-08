@@ -135,7 +135,7 @@ export function RepoList({ repos }: { repos: Repo[] }) {
             </div>
             <div className="mt-auto flex w-full items-center justify-between text-lg font-bold text-black dark:text-white">
               <div className="flex items-center gap-2">
-                <StarIcon className="h-5 w-5" />
+                <StarIcon className="mb-[3px] h-5 w-5" />
                 {repo.stargazers_count}
               </div>
               {repo.fork && (

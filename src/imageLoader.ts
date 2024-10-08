@@ -2,7 +2,7 @@ import { type ImageLoaderProps } from "next/image";
 
 function normalizeSrc(src: string) {
   if (src.startsWith("/")) {
-    return `${process.env.CF_PAGES_URL}${src}`;
+    return `https://beta.ethancoward.dev${src}`;
   }
   return src;
 }

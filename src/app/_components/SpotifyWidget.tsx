@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { NowPlaying } from "~/lib/spotify";
 import { useQuery } from "@tanstack/react-query";
+import Image from "next/image";
 
 async function getNowPlaying() {
   const res = await fetch("/api/now-playing", { method: "POST" });
@@ -45,13 +46,12 @@ export function SpotifyWidget() {
         >
           <div className="flex flex-row">
             <Link href={nowPlaying.songUrl ?? ""} target="_blank">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={nowPlaying.albumArt ?? ""}
                 alt="album art"
-                width={64}
-                height={64}
-                className="border-2 border-black hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:h-24 sm:w-24 md:h-32 md:w-32"
+                width={128}
+                height={128}
+                className="h-16 w-16 border-2 border-black hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:h-24 sm:w-24 md:h-32 md:w-32"
               />
             </Link>
             <div className="ml-2 mt-auto flex h-full w-24 flex-col sm:ml-3 sm:w-28 md:ml-4 md:w-32">

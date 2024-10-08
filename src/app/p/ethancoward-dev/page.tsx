@@ -8,10 +8,10 @@ export default function ProjectPage() {
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-0 sm:space-x-6">
           <div className="relative h-32 w-32 flex-shrink-0">
             <Image
-              src="/og-image.png"
+              src="/og-image.webp"
               alt="Ethan Coward"
-              layout="fill"
-              objectFit="cover"
+              height={128}
+              width={128}
               className="rounded-lg"
             />
           </div>

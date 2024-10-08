@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export function ProjectList({ projects }: { projects: Project[] }) {
   return (
@@ -53,8 +54,7 @@ function ProjectImage({
       className={`flex h-full items-center justify-center p-2 ${className}`}
       style={{ backgroundColor: project.bgColour }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={project.image}
         alt={project.title}
         width={196}

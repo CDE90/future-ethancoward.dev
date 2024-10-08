@@ -7,18 +7,29 @@ function normalizeSrc(src: string) {
   return src;
 }
 
+interface ImageLoaderOptions {
+  width?: number;
+  quality?: number;
+  format?: string;
+  image: string;
+}
+
 export default function imageLoader({ src, width, quality }: ImageLoaderProps) {
-  if (process.env.NODE_ENV === "development") {
-    return src;
+  const options: ImageLoaderOptions = {
+    format: "auto",
+    image: encodeURIComponent(normalizeSrc(src)),
+  };
+  if (width) {
+    options.width = width;
   }
-
-  const params = ["format=auto", `width=${width}`];
-
   if (quality) {
-    params.push(`quality=${quality}`);
+    options.quality = quality;
   }
 
-  const paramsString = params.join(",");
+  // Convert options to a query string
+  const queryString = Object.entries(options)
+    .map(([key, value]) => `${key}=${value}`)
+    .join("&");
 
-  return `https://ecwrd.com/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+  return `https://img.ecwrd.com/?${queryString}`;
 }

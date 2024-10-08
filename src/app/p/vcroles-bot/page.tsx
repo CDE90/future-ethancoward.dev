@@ -60,8 +60,8 @@ export default function ProjectPage() {
             for development
           </li>
           <li>
-            <span className="font-bold">discord.py:</span> Utilizing the
-            AutoShardedBot className for efficient API interactions
+            <span className="font-bold">discord.py:</span> The library used to
+            interact with the Discord API
           </li>
           <li>
             <span className="font-bold">PostgreSQL:</span> For robust data
@@ -146,3 +146,11 @@ export default function ProjectPage() {
 }
 
 export const runtime = "edge";
+
+export const metadata = {
+  title: "Ethan Coward | VC Roles",
+  description:
+    "VC Roles is a Discord bot created by Ethan Coward that enhances voice channels with features like automatic role assignment, text-to-speech commands, dynamic voice channel generation, and comprehensive voice channel logging.",
+  keywords:
+    "Ethan Coward, VC Roles, Discord bot, voice channels, text-to-speech, automatic role assignment, dynamic voice channel generation, comprehensive voice channel logging",
+};

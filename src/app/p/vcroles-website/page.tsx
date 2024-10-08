@@ -147,3 +147,11 @@ export default function ProjectPage() {
 }
 
 export const runtime = "edge";
+
+export const metadata = {
+  title: "Ethan Coward | VC Roles Website",
+  description:
+    "The VC Roles website created by Ethan Coward, provides a powerful dashboard for server administrators to manage and configure the VC Roles Discord bot.",
+  keywords:
+    "Ethan Coward, VC Roles, Discord bot, dashboard, voice channels, text-to-speech, automatic role assignment, dynamic voice channel generation, comprehensive voice channel logging",
+};

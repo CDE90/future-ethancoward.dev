@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: ["var(--font-gosha-sans)", ...fontFamily.sans],
+        mono: ["var(--font-ibm-plex-mono)", ...fontFamily.mono],
       },
       gridTemplateColumns: {
         "auto-auto": "auto auto",

@@ -8,7 +8,7 @@ import { ThemeSwitcher } from "~/components/ThemeSwitcher";
 
 export function NavBar() {
   return (
-    <nav className="border-b-2 border-black dark:border-white">
+    <nav className="border-b-2 border-black font-sans dark:border-white">
       <div className="flex h-12 items-center justify-between divide-x-2 divide-black dark:divide-white">
         <div className="flex h-full w-full items-center text-left text-2xl font-bold">
           <ButtonContainer className="flex h-full w-full md:hidden">

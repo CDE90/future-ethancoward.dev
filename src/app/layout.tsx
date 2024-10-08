@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { IBM_Plex_Mono } from "next/font/google";
 import { type Metadata } from "next";
+import localFont from "next/font/local";
 import { NavBar } from "~/components/NavBar";
 import { Footer } from "~/components/Footer";
 import { BehindApp } from "~/components/BehindApp";
@@ -12,6 +13,23 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const fontStyle = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
+  variable: "--font-ibm-plex-mono",
+});
+
+const titleFontStyle = localFont({
+  src: [
+    {
+      path: "../fonts/PPGoshaSans-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/PPGoshaSans-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gosha-sans",
 });
 
 export default function RootLayout({
@@ -20,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontStyle.className} min-h-screen bg-fuchsia-400 p-4 md:p-6`}
+      className={`${fontStyle.variable} ${titleFontStyle.variable} min-h-screen bg-fuchsia-400 p-4 font-mono md:p-6`}
     >
       <Providers>
         <body>

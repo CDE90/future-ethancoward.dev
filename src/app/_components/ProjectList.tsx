@@ -28,9 +28,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
                 <h1 className="mb-4 text-xl font-bold sm:text-3xl">
                   {project.title}
                 </h1>
-                <p className="mb-4 line-clamp-4 text-xs">
-                  {project.description}
-                </p>
+                <p className="mb-4 line-clamp-4">{project.description}</p>
                 <strong className="inline-block border-2 border-black px-2 py-1 transition-all hover:bg-black hover:text-white">
                   Read More
                 </strong>

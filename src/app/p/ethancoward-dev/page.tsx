@@ -8,11 +8,11 @@ export default function ProjectPage() {
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-0 sm:space-x-6">
           <div className="relative h-32 w-32 flex-shrink-0">
             <Image
-              src="/og-image.webp"
+              src="/android-chrome-512x512.png"
               alt="Ethan Coward"
-              height={128}
-              width={128}
-              className="rounded-lg"
+              height={256}
+              width={256}
+              className="w-32 rounded-lg"
             />
           </div>
           <h1 className="max-w-full text-2xl font-bold sm:text-4xl">

@@ -57,8 +57,8 @@ function ProjectImage({
       <Image
         src={project.image}
         alt={project.title}
-        width={196}
-        height={196}
+        width={256}
+        height={256}
         className="max-h-48 max-w-48"
       />
     </figure>

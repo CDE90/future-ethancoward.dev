@@ -49,8 +49,8 @@ export function SpotifyWidget() {
               <Image
                 src={nowPlaying.albumArt ?? ""}
                 alt="album art"
-                width={128}
-                height={128}
+                width={192}
+                height={192}
                 className="h-16 w-16 border-2 border-black hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:h-24 sm:w-24 md:h-32 md:w-32"
               />
             </Link>

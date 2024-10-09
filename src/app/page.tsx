@@ -147,7 +147,7 @@ const projects: Project[] = [
     title: "VC Roles Discord Bot",
     description:
       "A Discord bot that adds much needed features to Discord Voice Channels.",
-    image: "/images/vcroles-logo.webp",
+    image: "/images/vcroles-logo.png",
     link: "/p/vcroles-bot",
     imagePos: "left",
     bgColour: "#3d46cd",
@@ -156,7 +156,7 @@ const projects: Project[] = [
     title: "VC Roles Website & Dashboard",
     description:
       "The website for the VC Roles Discord Bot with a dashboard for server management, documentation and more.",
-    image: "/images/vcroles-logo.webp",
+    image: "/images/vcroles-logo.png",
     link: "/p/vcroles-website",
     imagePos: "right",
     bgColour: "#3d46cd",
@@ -165,7 +165,7 @@ const projects: Project[] = [
     title: "ethancoward.dev Website",
     description:
       "You're here! My personal website to showcase my projects and other stuff.",
-    image: "/android-chrome-512x512.webp",
+    image: "/android-chrome-512x512.png",
     link: "/p/ethancoward-dev",
     imagePos: "left",
     bgColour: "#fbfbfb",

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ProjectList, type Project } from "~/app/_components/ProjectList";
 
 export default function HomePage() {
@@ -43,20 +42,30 @@ export default function HomePage() {
                   </ul>
                 </section>
 
-                <section className="neo-brutalist-featured-project">
-                  <h2 className="mb-2 text-2xl font-bold">Featured Project</h2>
-                  <div className="bg-yellow-300 p-4 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-                    <h3 className="mb-2 text-lg font-bold uppercase">
-                      Coming Soon
-                    </h3>
-                    <p className="mb-3 text-sm">Coming soon...</p>
-                    <Link
-                      href="#"
-                      className="inline-block bg-black px-4 py-2 text-sm font-bold text-white transition-transform hover:translate-x-1 hover:translate-y-1"
-                    >
-                      LEARN MORE →
-                    </Link>
-                  </div>
+                <section>
+                  <h2 className="mb-2 text-2xl font-bold">Education</h2>
+                  <ul className="space-y-2 text-sm text-gray-800 dark:text-gray-300">
+                    <li>
+                      <strong>Computer Science at University of Bath</strong>{" "}
+                      (Sep 2024 - Present)
+                      <ul className="list-inside list-disc pl-4">
+                        <li>BSc(Hons) Computer Science</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>The King Edward VI School, Morpeth</strong> (Sep
+                      2019 - Aug 2024)
+                      <ul className="list-inside list-disc pl-4">
+                        <li>
+                          A levels - A*A*A*A* in Computer Science, Maths,
+                          Further Maths, Physics
+                        </li>
+                        <li>
+                          GCSEs - 9x Grade 9, 2x Grade 8 (11x A* equivalent)
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </section>
               </div>
 

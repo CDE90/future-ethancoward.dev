@@ -13,7 +13,7 @@ export default function HomePage() {
             <section className="mb-6">
               <h2 className="mb-2 text-2xl font-bold">About</h2>
               <p className="text-gray-800 sm:text-lg dark:text-gray-300">
-                18-year-old Comp Sci student. UK-based. Tech enthusiast. Coder.
+                19-year-old Comp Sci student. UK-based. Tech enthusiast. Coder.
               </p>
             </section>
 
